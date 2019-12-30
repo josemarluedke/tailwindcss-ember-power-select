@@ -5,6 +5,12 @@ powerful Ember addon for working with selects. This is a Tailwind CSS plugin
 for styling both `<PowerSelect>`, `<PowerSelectMultiple>` and all the
 options related to these.
 
+## Documentation
+
+The basic documentation can be found here:
+
+[Read the documentation](https://josemarluedke.github.io/tailwindcss-ember-power-select/)
+
 ## Compatibility
 
 * TailwindCSS v1 or above
