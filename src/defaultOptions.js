@@ -62,6 +62,7 @@ module.exports = function(customConfig) {
         minHeight: `calc((${defaultTheme.fontSize.base} * ${defaultTheme.lineHeight.snug}) + ${defaultTheme.spacing[6]})`,
         userSelect: 'none',
         '&:focus': {
+          outline: 'none',
           boxShadow: config.triggerFocusBoxShadow,
           borderColor: config.focusBorderColor
         },
@@ -78,7 +79,8 @@ module.exports = function(customConfig) {
         },
         '&[aria-disabled=true]': {
           borderColor: config.disabledBorderColor,
-          color: config.disabledTextColor
+          color: config.disabledTextColor,
+          cursor: 'default'
         },
         '&[aria-invalid=true]': {
           borderColor: config.invalidBorderColor

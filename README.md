@@ -7,8 +7,25 @@
 
 ## Installation
 
+1. Install the plugin:
+
 ```
 yarn add -D tailwindcss-ember-power-select
+```
+
+2. Add it to your tailwind.config.js file:
+
+```
+// tailwind.config.js
+module.exports = {
+  // ...
+  plugins: [
+    require('tailwindcss-ember-power-select').plugin({
+      // Config options go here eg.
+      // borderColor: 'red'
+    })
+  ]
+}
 ```
 
 ## License

@@ -1,0 +1,100 @@
+<label class="font-bold">Regular</label>
+<PowerSelect
+  @selected={{this.destination}}
+  @options={{this.cities}}
+  @onChange={{fn this.setField "destination"}}
+  as |name|
+>
+  {{name}}
+</PowerSelect>
+
+<label class="mt-4 inline-block font-bold">Small</label>
+<PowerSelect
+  @triggerClass="ember-power-select-trigger-sm"
+  @selected={{this.selectedName}}
+  @options={{this.names}}
+  @onChange={{fn this.setField "selectedName"}}
+  @allowClear={{true}}
+  as |name|
+>
+  {{name}}
+</PowerSelect>
+
+<label class="mt-4 inline-block font-bold">Large</label>
+<PowerSelect
+  @triggerClass="ember-power-select-trigger-lg"
+  @selected={{this.selectedName}}
+  @options={{this.names}}
+  @onChange={{fn this.setField "selectedName"}}
+  @allowClear={{true}}
+  as |name|
+>
+  {{name}}
+</PowerSelect>
+
+<label class="mt-4 inline-block font-bold">With @allowClear</label>
+<PowerSelect
+  @selected={{this.selectedName}}
+  @options={{this.names}}
+  @onChange={{fn this.setField "selectedName"}}
+  @allowClear={{true}}
+  as |name|
+>
+  {{name}}
+</PowerSelect>
+
+<label class="mt-4 inline-block font-bold">With @placeholder</label>
+<PowerSelect
+  @selected={{this.selectedName}}
+  @placeholder="Select one item"
+  @options={{this.names}}
+  @onChange={{fn this.setField "selectedName"}}
+  as |name|
+>
+  {{name}}
+</PowerSelect>
+
+<label class="mt-4 inline-block font-bold">Disabled</label>
+<PowerSelect
+  @selected={{this.selectedName}}
+  @disabled={{true}}
+  @options={{this.names}}
+  @onChange={{fn this.setField "selectedName"}}
+  as |name|
+>
+  {{name}}
+</PowerSelect>
+
+<label class="mt-4 inline-block font-bold">With Search</label>
+<PowerSelect
+  @searchEnabled={{true}}
+  @options={{this.countries}}
+  @selected={{this.country}}
+  @searchField="name"
+  @onChange={{fn this.setField "country"}}
+  as |country|
+>
+  {{country.name}}
+</PowerSelect>
+
+<label class="mt-4 inline-block font-bold">With Groups</label>
+<PowerSelect
+  @options={{this.groupedNumbers}}
+  @selected={{this.number}}
+  @onChange={{fn this.setField "number"}}
+  as |num|
+>
+  {{num}}
+</PowerSelect>
+
+<label class="mt-4 inline-block font-bold">Multiple Select</label>
+<PowerSelectMultiple
+  @searchEnabled={{true}}
+  @options={{this.names}}
+  @selected={{this.selectedNames}}
+  @placeholder="Select some names..."
+  @onChange={{fn this.setField "selectedNames"}}
+  as |name|
+>
+  {{name}}
+</PowerSelectMultiple>

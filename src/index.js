@@ -64,11 +64,13 @@ function registerComponents({ addComponents }, userOptions, customConfig) {
 module.exports = {
   registerComponents,
 
-  default: function({ addComponents, theme }, customConfig) {
-    registerComponents(
-      { addComponents },
-      theme('ember-power-select'),
-      customConfig
-    );
+  plugin: function(customConfig) {
+    return function({ addComponents, theme }) {
+      registerComponents(
+        { addComponents },
+        theme('ember-power-select'),
+        customConfig
+      );
+    };
   }
 };
