@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-ember-power-select",
-  "version": "0.1.0-beta.1",
+  "version": "0.1.0",
   "description": "Tailwind CSS plugin for Ember Power Select",
   "main": "src/index.js",
   "repository": "http://github.com/josemarluedke/tailwindcss-ember-power-select",
