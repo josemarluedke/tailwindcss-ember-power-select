@@ -3,6 +3,9 @@
 # compiled output
 /dist/
 /tmp/
+/docs/dist/
+docs/tmp/
+deploy-docs/
 
 # dependencies
 /bower_components/
