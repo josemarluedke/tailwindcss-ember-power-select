@@ -3,10 +3,5 @@ module.exports = {
     extend: {}
   },
   variants: {},
-  plugins: [
-    require('tailwindcss-ember-power-select').plugin({
-      // Config options go here eg.
-      // borderColor: 'red'
-    })
-  ]
+  plugins: [require('tailwindcss-ember-power-select').plugin()]
 };
