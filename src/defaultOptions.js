@@ -41,8 +41,12 @@ const defaultConfig = {
   openedBorderRadius: defaultTheme.borderRadius.default
 };
 
-module.exports = function(customConfig) {
-  const config = merge(defaultConfig, customConfig);
+module.exports = function({ theme }, customConfig) {
+  if (typeof customConfig === 'function') {
+    customConfig = customConfig({ theme });
+  }
+
+  const config = merge(defaultConfig, customConfig || {});
 
   return {
     default: {

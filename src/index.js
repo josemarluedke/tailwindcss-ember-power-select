@@ -4,14 +4,18 @@ const isEmpty = require('lodash/isEmpty');
 const svgToDataUri = require('mini-svg-data-uri');
 const { merge, flattenOptions, replaceIconDeclarations } = require('./helpers');
 
-function resolveOptions(userOptions, customConfig) {
+function resolveOptions(userOptions, { theme }, customConfig) {
   return merge(
-    require('./defaultOptions')(customConfig),
+    require('./defaultOptions')({ theme }, customConfig),
     fromPairs(map(userOptions, (value, key) => [key, flattenOptions(value)]))
   );
 }
 
-function registerComponents({ addComponents }, userOptions, customConfig) {
+function registerComponents(
+  { addComponents, theme },
+  userOptions,
+  customConfig
+) {
   function add(element, options, modifier) {
     if (isEmpty(options)) {
       return;
@@ -39,7 +43,7 @@ function registerComponents({ addComponents }, userOptions, customConfig) {
     }
   }
 
-  const options = resolveOptions(userOptions, customConfig);
+  const options = resolveOptions(userOptions, { theme }, customConfig);
   Object.keys(options).forEach(key => {
     const modifier = key === 'default' ? '' : `-${key}`;
 
@@ -67,8 +71,8 @@ module.exports = {
   plugin: function(customConfig) {
     return function({ addComponents, theme }) {
       registerComponents(
-        { addComponents },
-        theme('ember-power-select'),
+        { addComponents, theme },
+        theme('emberPowerSelect'),
         customConfig
       );
     };
