@@ -57,6 +57,16 @@ module.exports = function(defaults) {
 };
 ```
 
+## Roadmap
+
+A few things we still need to do:
+
+- [ ] Add `dir[rtl]` styles
+- [ ] Add animation for dropdown
+- [ ] Add documentation for customizing icons
+- [ ] Add documentation for sizes
+- [ ] Tests / CI
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE.md).
