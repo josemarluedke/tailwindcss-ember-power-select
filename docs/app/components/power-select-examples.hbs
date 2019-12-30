@@ -1,4 +1,4 @@
-<label class="font-bold">Regular</label>
+<label class="pb-1 inline-block font-semibold">Regular</label>
 <PowerSelect
   @selected={{this.destination}}
   @options={{this.cities}}
@@ -8,7 +8,7 @@
   {{name}}
 </PowerSelect>
 
-<label class="mt-4 inline-block font-bold">Small</label>
+<label class="pb-1 mt-4 inline-block font-semibold">Small</label>
 <PowerSelect
   @triggerClass="ember-power-select-trigger-sm"
   @selected={{this.selectedName}}
@@ -20,7 +20,7 @@
   {{name}}
 </PowerSelect>
 
-<label class="mt-4 inline-block font-bold">Large</label>
+<label class="pb-1 mt-4 inline-block font-semibold">Large</label>
 <PowerSelect
   @triggerClass="ember-power-select-trigger-lg"
   @selected={{this.selectedName}}
@@ -32,7 +32,7 @@
   {{name}}
 </PowerSelect>
 
-<label class="mt-4 inline-block font-bold">With @allowClear</label>
+<label class="pb-1 mt-4 inline-block font-semibold">With @allowClear</label>
 <PowerSelect
   @selected={{this.selectedName}}
   @options={{this.names}}
@@ -43,7 +43,7 @@
   {{name}}
 </PowerSelect>
 
-<label class="mt-4 inline-block font-bold">With @placeholder</label>
+<label class="pb-1 mt-4 inline-block font-semibold">With @placeholder</label>
 <PowerSelect
   @selected={{this.selectedName}}
   @placeholder="Select one item"
@@ -54,7 +54,7 @@
   {{name}}
 </PowerSelect>
 
-<label class="mt-4 inline-block font-bold">Disabled</label>
+<label class="pb-1 mt-4 inline-block font-semibold">Disabled</label>
 <PowerSelect
   @selected={{this.selectedName}}
   @disabled={{true}}
@@ -65,7 +65,7 @@
   {{name}}
 </PowerSelect>
 
-<label class="mt-4 inline-block font-bold">With Search</label>
+<label class="pb-1 mt-4 inline-block font-semibold">With Search</label>
 <PowerSelect
   @searchEnabled={{true}}
   @options={{this.countries}}
@@ -77,7 +77,7 @@
   {{country.name}}
 </PowerSelect>
 
-<label class="mt-4 inline-block font-bold">With Groups</label>
+<label class="pb-1 mt-4 inline-block font-semibold">With Groups</label>
 <PowerSelect
   @options={{this.groupedNumbers}}
   @selected={{this.number}}
@@ -87,7 +87,7 @@
   {{num}}
 </PowerSelect>
 
-<label class="mt-4 inline-block font-bold">Multiple Select</label>
+<label class="pb-1 mt-4 inline-block font-semibold">Multiple Select</label>
 <PowerSelectMultiple
   @searchEnabled={{true}}
   @options={{this.names}}
