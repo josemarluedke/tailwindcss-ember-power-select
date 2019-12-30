@@ -1,0 +1,145 @@
+<h1 class="font-bold text-4xl">
+  Tailwind CSS for Ember Power Select
+</h1>
+
+<a
+  class="mt-2 inline-block"
+  href="https://github.com/josemarluedke/tailwindcss-ember-power-select"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  View on GitHub
+</a>
+
+<p class="mt-4">
+  <a
+    class="mt-2 inline-block underline"
+    href="https://github.com/cibernox/ember-power-select"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Ember Power Select
+  </a> is a
+  powerful Ember addon for working with selects. This is a Tailwind CSS plugin
+  for styling both
+  <code>{{"<PowerSelect>"}}</code>,
+  <code>{{"<PowerSelectMultiple>"}}</code>
+  and all the options related to these.
+  <a href="#demo" class="underline">Below you can see</a> all the possible variations of Power Select and the styles we applied.
+</p>
+
+
+<hr class="my-8">
+
+<h2 class="text-3xl mb-4 font-bold">Installation</h2>
+
+<h3 class="pb-6 text-xl font-semibold">
+  1. Install the plugin:
+</h3>
+
+<p>Install the plugin using Yarn or npm:</p>
+
+<CodeBlock @language="sh">yarn add -D tailwindcss-ember-power-select</CodeBlock>
+
+<h3 class="pb-6 text-xl font-semibold">
+  2. Add it to your <code>tailwind.config.js</code> file:
+</h3>
+
+<p>Add the plugin to the <code>plugins</code> section of your <code>tailwind.config.js</code> file:</p>
+
+<CodeSnippet @name="basic-tailwind.config.js" />
+
+<h3 class="pb-6 text-xl font-semibold">
+  3. Disable default Ember Power Select theme.
+</h3>
+
+<p>Add to your <code>ember-cli-build.js</code> file:</p>
+
+<CodeSnippet @name="basic-ember-cli-build.js" />
+
+<hr class="my-8">
+
+<h2 id="demo" class="text-3xl mb-4 font-bold">Demo</h2>
+
+<PowerSelectExamples />
+
+<hr class="my-8">
+
+<h2 class="text-3xl mb-4 font-bold">Configuration</h2>
+
+<p>
+  Some options are a little more complicated to customize using default Tailwind theme options.
+  For that reason, we have exposed a few configuration options that can be passed into the plugin.
+  Below you can see all the configuration options and their default values.
+</p>
+
+<CodeSnippet @name="config-options.js" />
+
+<p>
+  In your <code>tailwind.config.js</code> you can pass an object or a function that returns an object for the custom configuration.
+  If you pass a function, it will receive a single object argument that can be destructured to get the
+  <a
+    class="underline"
+    href="https://tailwindcss.com/docs/theme#referencing-other-values"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    theme function
+  </a>.
+</p>
+
+<CodeSnippet @name="tailwind-custom-config.js" />
+
+<hr class="my-8">
+
+<h2 class="text-3xl mb-4 font-bold">Customizing the default styles</h2>
+<p>
+  You can customize the default styles applied by this plugin in the
+  <code>theme.emberPowerSelect.default</code>
+  section of your
+  <code>tailwind.config.js</code> file.
+</p>
+
+<p class="mt-4">
+  Each element can be customized under the follwoing keys:
+  <code>trigger</code>,
+  <code>placeholder</code>,
+  <code>statusIcon</code>,
+  <code>clearBtn</code>,
+  <code>search</code>,
+  <code>searchInput</code>,
+  <code>dropdown</code>,
+  <code>options</code>,
+  <code>option</code>,
+  <code>group</code>,
+  <code>groupName</code>,
+  <code>triggerMultipleInput</code>,
+  <code>multipleOptions</code>,
+  <code>multipleOption</code> and
+  <code>multipleRemoveBtn</code>.
+</p>
+
+
+<CodeSnippet @name="tailwind-theme-config.js" />
+
+<p>
+  The configuration format is the same
+  <a
+    class="underline"
+    href="https://tailwindcss.com/docs/plugins/#css-in-js-syntax"
+    target="_blank"
+    rel="noopener noreferrer"
+  >CSS-in-JS</a>
+  syntax used to author Tailwind plugins, so you are free to customize or add any CSS properties you like.
+</p>
+
+<p class="mt-4">
+  See
+  <a
+    class="underline"
+    href="https://github.com/josemarluedke/tailwindcss-ember-power-select/blob/master/src/defaultOptions.js"
+    target="_blank"
+    rel="noopener noreferrer"
+  >the default options</a>
+  used by the plugin for a complete reference of styles that are applied out of the box.
+</p>
