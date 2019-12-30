@@ -1,10 +1,9 @@
-# tailwindcss-ember-power-select
-
+# Tailwind CSS Ember Power Select
 
 ## Compatibility
 
 * TailwindCSS v1 or above
-* Node.js v10 or above
+* Node.js v8.3 or above
 
 ## Installation
 

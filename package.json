@@ -2,8 +2,18 @@
   "name": "tailwindcss-ember-power-select",
   "version": "0.0.1",
   "description": "TailwindCSS plugin for Ember Power Select",
-  "main": "index.js",
+  "main": "src/index.js",
   "repository": "http://github.com/josemarluedke/tailwindcss-ember-power-select",
   "license": "MIT",
-  "author": "Josemar Luedke <josemarluedke@gmail.com>"
+  "author": "Josemar Luedke <josemarluedke@gmail.com>",
+  "scripts": {
+    "lint:js": "eslint ."
+  },
+  "devDependencies": {
+    "@neighborly/eslint-config-node": "^0.6.0",
+    "eslint": "^6.8.0"
+  },
+  "engines": {
+    "node": "^8.3.* || >= 10.*"
+  }
 }
