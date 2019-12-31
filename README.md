@@ -61,7 +61,6 @@ module.exports = function(defaults) {
 
 A few things we still need to do:
 
-- [ ] Add `dir=rtl` styles
 - [ ] Add animation for dropdown
 - [ ] Add documentation for customizing icons
 - [ ] Add documentation for sizes
