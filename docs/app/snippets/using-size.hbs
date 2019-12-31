@@ -1,0 +1,21 @@
+{{!--  Small  --}}
+<PowerSelect
+  @triggerClass="ember-power-select-trigger-sm"
+  @selected={{this.selectedName}}
+  @options={{this.names}}
+  @onChange={{fn this.setField "selectedName"}}
+  as |name|
+>
+  {{name}}
+</PowerSelect>
+
+{{!--  Large  --}}
+<PowerSelect
+  @triggerClass="ember-power-select-trigger-lg"
+  @selected={{this.selectedName}}
+  @options={{this.names}}
+  @onChange={{fn this.setField "selectedName"}}
+  as |name|
+>
+  {{name}}
+</PowerSelect>

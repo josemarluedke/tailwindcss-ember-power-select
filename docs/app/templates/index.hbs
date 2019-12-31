@@ -5,8 +5,6 @@
 <a
   class="mt-2 inline-block"
   href="https://github.com/josemarluedke/tailwindcss-ember-power-select"
-  target="_blank"
-  rel="noopener noreferrer"
 >
   View on GitHub
 </a>
@@ -101,7 +99,7 @@
 </p>
 
 <p class="mt-4">
-  Each element can be customized under the follwoing keys:
+  Each element can be customized under the following keys:
   <code>trigger</code>,
   <code>placeholder</code>,
   <code>statusIcon</code>,
@@ -118,7 +116,6 @@
   <code>multipleOption</code> and
   <code>multipleRemoveBtn</code>.
 </p>
-
 
 <CodeSnippet @name="tailwind-theme-config.js" />
 
@@ -143,3 +140,60 @@
   >the default options</a>
   used by the plugin for a complete reference of styles that are applied out of the box.
 </p>
+
+<h2 class="text-xl my-4 font-bold">Customizing the icons</h2>
+
+<p>
+  Providing a encoded SVG data URL as backgroundImage can be a bit cumbersome, so to make icon customization easier this plugin allows you to provide a normal unencoded SVG using a special icon property instead.
+</p>
+
+<p class="mt-4">
+  The following properties allow for icons:
+  <code>statusIcon</code>,
+  <code>clearBtn</code> and
+  <code>multipleRemoveBtn</code>.
+</p>
+
+<CodeSnippet @name="custom-icon.js" />
+
+<h2 class="text-xl my-4 font-bold">Customizing the sizes</h2>
+
+<p>
+  We have provided 2 additional sizes for the trigger,
+  <code>sm</code> and
+  <code>lg</code>. We use Tailwind's CSS "modifier" feature for this.
+</p>
+
+<p class="mt-4">
+  Below you can see how to change the default sizes.
+</p>
+
+<CodeSnippet @name="config-size.js" />
+
+<p>
+  To use a given size with Ember Power Select, you must add
+  <code>ember-power-select-trigger-sm</code>
+  or
+  <code>ember-power-select-trigger-lg</code>
+  class to the trigger.
+</p>
+
+<CodeSnippet @name="using-size.hbs" />
+
+<footer class="pt-12 flex items-center justify-center">
+  Made with
+
+  <svg class="inline-flex w-3 mx-1" viewBox="0 0 544 465" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill="currentColor" d="M398.9 0C345.8 0 296 41.7 272 65.3 248 41.7 198.2 0 145.1 0 54.3 0 0 52.9 0 141.5c0 72.6 66.8 133.3 69.2 135.4l187 180.8c8.8 8.5 22.8 8.5 31.6 0l186.7-180.2c2.7-2.7 69.5-63.5 69.5-136C544 52.9 489.7 0 398.9 0z" />
+  </svg>
+
+  in San Francisco by
+  <a
+    class="ml-1 underline"
+    href="https://josemarluedke.com"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Josemar Luedke
+  </a>
+</footer>
