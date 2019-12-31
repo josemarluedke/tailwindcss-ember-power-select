@@ -57,13 +57,28 @@ module.exports = function(defaults) {
 };
 ```
 
-## Roadmap
+## Development
 
-A few things we still need to do:
+* `git clone https://github.com/josemarluedke/tailwindcss-ember-power-select.git` this repository
+* `yarn install`
+* `yarn link`
+* `cd docs`
+* `yarn install`
+* `yarn link "tailwindcss-ember-power-select"`
+* `ember serve`
 
-- [ ] Add animation for dropdown
-- [ ] Add documentation for customizing icons
-- [ ] Add documentation for sizes
+Due to the nature of the setup of the docs app, changing the default options of the plugin will
+not trigger a rebuild. However, if you open `tailwind.config.js` and just save
+it, it will. Resulting in the styles to be updated.
+
+### Linting
+
+* `yarn lint:js`
+
+#### Docs app
+
+* `yarn lint:hbs`
+* `yarn lint:js`
 
 ## License
 
