@@ -5,6 +5,7 @@ module.exports = function(deployTarget) {
   let ENV = {
     build: {},
     git: {
+      repo: 'git@github.com:josemarluedke/tailwindcss-ember-power-select.git',
       branch: 'gh-pages'
     }
     // include other plugin configuration that applies to all deploy targets here
