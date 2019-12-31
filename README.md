@@ -1,4 +1,4 @@
-# Tailwind CSS for Ember Power Select
+# Tailwind CSS for Ember Power Select ![](https://github.com/josemarluedke/tailwindcss-ember-power-select/workflows/CI/badge.svg)
 
 [Ember Power Select](https://github.com/cibernox/ember-power-select) is a
 powerful Ember addon for working with selects. This is a Tailwind CSS plugin
@@ -61,11 +61,10 @@ module.exports = function(defaults) {
 
 A few things we still need to do:
 
-- [ ] Add `dir[rtl]` styles
+- [ ] Add `dir=rtl` styles
 - [ ] Add animation for dropdown
 - [ ] Add documentation for customizing icons
 - [ ] Add documentation for sizes
-- [ ] Tests / CI
 
 ## License
 
