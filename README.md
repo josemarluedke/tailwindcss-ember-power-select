@@ -14,7 +14,7 @@ The basic documentation can be found here:
 ## Compatibility
 
 * TailwindCSS v1 or above
-* Node.js v8.3 or above
+* Node.js v10 or above
 
 ## Installation
 
