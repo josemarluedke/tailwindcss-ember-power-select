@@ -1,0 +1,29 @@
+/* app.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --power-select-text-color: #1a202c;
+  --power-select-disabled-text-color: #a0aec0;
+  --power-select-disabled-border-color: #e2e8f0;
+  --power-select-placeholder-text-color: #a0aec0;
+  --power-select-background-color: #fff;
+  --power-select-dropdown-background-color: #fff;
+  --power-select-border-color: #a0aec0;
+  --power-select-selected-background-color: #edf2f7;
+  --power-select-multiple-option-background-color: #718096;
+}
+
+.mode-dark {
+  --power-select-text-color: #e2e8f0;
+  --power-select-disabled-text-color: #4a5568;
+  --power-select-disabled-border-color: #2d3748;
+  --power-select-placeholder-text-color: #4a5568;
+  --power-select-background-color: #1a202c;
+  --power-select-dropdown-background-color: #1a202c;
+  --power-select-border-color: #718096;
+  --power-select-selected-background-color: #4a5568;
+  --power-select-multiple-option-background-color: #4a5568;
+}

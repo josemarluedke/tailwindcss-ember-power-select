@@ -1,13 +1,24 @@
 @tailwind base;
-
 @tailwind components;
-
 @tailwind utilities;
+
+body,
+code {
+  transition: background-color 0.2s ease, color 0.2s ease;
+  transition-property: background-color, color;
+  transition-duration: 0.2s, 0.2s;
+  transition-timing-function: ease, ease;
+  transition-delay: 0s, 0s;
+}
 
 code {
   @apply bg-gray-200;
   @apply rounded-sm;
   @apply tracking-tight;
+}
+
+.mode-dark code {
+  @apply bg-gray-700;
 }
 
 .hljs {
