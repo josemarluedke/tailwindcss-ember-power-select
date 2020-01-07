@@ -1,5 +1,39 @@
 <div
   class="max-w-3xl w-full mx-auto px-4 py-12 tracking-wide leading-relaxed"
 >
-  {{outlet}}
+  <header>
+    <h1 class="font-bold text-4xl">
+      Tailwind CSS for Ember Power Select
+    </h1>
+
+    <a
+      class="mt-2 inline-block"
+      href="https://github.com/josemarluedke/tailwindcss-ember-power-select"
+    >
+      View on GitHub
+    </a>
+
+    <ThemeSwitcher />
+  </header>
+
+  <main>
+    {{outlet}}
+  </main>
+
+  <footer class="pt-12 flex flex-wrap items-center justify-center">
+    Made with
+
+    <svg class="inline-flex w-3 mx-1" viewBox="0 0 544 465" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill="currentColor" d="M398.9 0C345.8 0 296 41.7 272 65.3 248 41.7 198.2 0 145.1 0 54.3 0 0 52.9 0 141.5c0 72.6 66.8 133.3 69.2 135.4l187 180.8c8.8 8.5 22.8 8.5 31.6 0l186.7-180.2c2.7-2.7 69.5-63.5 69.5-136C544 52.9 489.7 0 398.9 0z" />
+    </svg>
+    in San Francisco by
+    <a
+      class="ml-1 underline"
+      href="https://josemarluedke.com"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Josemar Luedke
+    </a>
+  </footer>
 </div>
