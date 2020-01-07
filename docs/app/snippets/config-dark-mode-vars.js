@@ -1,22 +1,7 @@
-const path = require('path');
-
-// Remove cache to allow rebuilds
-delete require.cache[
-  path.join(
-    path.dirname(require.resolve('tailwindcss-ember-power-select')),
-    'defaultOptions.js'
-  )
-];
-
+// tailwind.config.js
 module.exports = {
-  theme: {},
-  variants: {
-    backgroundColor: ['dark', 'responsive', 'hover', 'focus'],
-    textColor: ['dark', 'responsive', 'hover', 'focus']
-  },
+  // ..
   plugins: [
-    require('tailwindcss-dark-mode')(),
-
     function({ addBase, theme }) {
       addBase({
         [':root']: {
@@ -46,19 +31,8 @@ module.exports = {
           )
         }
       });
-    },
+    }
 
-    require('tailwindcss-ember-power-select').plugin({
-      textColor: 'var(--power-select-text-color)',
-      disabledTextColor: 'var(--power-select-disabled-text-color)',
-      disabledBorderColor: 'var(--power-select-disabled-border-color)',
-      placeholderTextColor: 'var(--power-select-placeholder-text-color)',
-      backgroundColor: 'var(--power-select-background-color)',
-      dropdownBackgroundColor: 'var(--power-select-dropdown-background-color)',
-      borderColor: 'var(--power-select-border-color)',
-      selectedBackgroundColor: 'var(--power-select-selected-background-color)',
-      multipleOptionBackgroundColor:
-        'var(--power-select-multiple-option-background-color)'
-    })
+    // ..
   ]
 };

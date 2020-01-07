@@ -4,10 +4,11 @@ const defaultTheme = require('tailwindcss/resolveConfig')(
 const { merge } = require('./helpers');
 
 const defaultConfig = {
-  textColor: 'inherit',
-  disabledTextColor: defaultTheme.borderColor.gray[500],
-  placeholderTextColor: defaultTheme.borderColor.gray[500],
+  textColor: defaultTheme.colors.gray[900],
+  disabledTextColor: defaultTheme.colors.gray[500],
+  placeholderTextColor: defaultTheme.colors.gray[500],
   backgroundColor: defaultTheme.colors.white,
+  dropdownBackgroundColor: defaultTheme.colors.white,
   dropdownMargin: defaultTheme.spacing[1],
 
   // Selected option
@@ -155,6 +156,7 @@ module.exports = function({ theme }, customConfig) {
       // Dropdown
       dropdown: {
         color: config.textColor,
+        backgroundColor: config.dropdownBackgroundColor,
         borderColor: config.borderColor,
         borderWidth: defaultTheme.borderWidth.default,
         borderRadius: config.dropdownBorderRadius,
@@ -243,6 +245,7 @@ module.exports = function({ theme }, customConfig) {
 
       // multiple
       triggerMultipleInput: {
+        backgroundColor: 'transparent',
         display: 'inline-flex',
         marginTop: '0.15rem',
         alignSelf: 'baseline',
@@ -288,7 +291,7 @@ module.exports = function({ theme }, customConfig) {
         transition: 'opacity .20s ease-in-out',
         height: '1em',
         width: '1em',
-        iconColor: config.multipleOptionTextColor,
+        iconColor: 'currentColor',
         icon: iconColor =>
           `<svg fill="${iconColor}" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M9.41 8l2.29-2.29c.19-.18.3-.43.3-.71a1.003 1.003 0 0 0-1.71-.71L8 6.59l-2.29-2.3a1.003 1.003 0 0 0-1.42 1.42L6.59 8 4.3 10.29c-.19.18-.3.43-.3.71a1.003 1.003 0 0 0 1.71.71L8 9.41l2.29 2.29c.18.19.43.3.71.3a1.003 1.003 0 0 0 .71-1.71L9.41 8z" /></svg>`,
         '&:not(:hover)': {

@@ -9,6 +9,8 @@
   View on GitHub
 </a>
 
+<ThemeSwitcher />
+
 <p class="mt-4">
   <a
     class="mt-2 inline-block underline"
@@ -59,7 +61,9 @@
 
 <h2 id="demo" class="text-3xl mb-4 font-bold">Demo</h2>
 
-<PowerSelectExamples />
+<div class="p-4">
+  <PowerSelectExamples />
+</div>
 
 <hr class="my-8">
 
@@ -141,7 +145,7 @@
   used by the plugin for a complete reference of styles that are applied out of the box.
 </p>
 
-<h2 class="text-xl my-4 font-bold">Customizing the icons</h2>
+<h3 class="text-xl my-4 font-bold">Customizing the icons</h3>
 
 <p>
   Providing a encoded SVG data URL as backgroundImage can be a bit cumbersome, so to make icon customization easier this plugin allows you to provide a normal unencoded SVG using a special icon property instead.
@@ -156,7 +160,7 @@
 
 <CodeSnippet @name="custom-icon.js" />
 
-<h2 class="text-xl my-4 font-bold">Customizing the sizes</h2>
+<h3 class="text-xl my-4 font-bold">Customizing the sizes</h3>
 
 <p>
   We have provided 2 additional sizes for the trigger,
@@ -179,6 +183,38 @@
 </p>
 
 <CodeSnippet @name="using-size.hbs" />
+
+<hr class="my-8">
+
+<h2 class="text-3xl my-4 font-bold">Dark Mode</h2>
+
+<p>
+  There are many ways that one can implement Dark Mode in an app.
+  The most common way is using CSS variables. In this example, we have configured the plugin to use the CSS variables as the source for background, borders, and text.
+</p>
+
+<p class="mt-4">
+  Note that the plugin does not implement Dark Mode by default. It's an application concern.
+</p>
+
+<CodeSnippet @name="config-dark-mode.js" />
+
+<p>
+  After the plugin is configured to use the CSS variables, we can just set the colors in the css.
+</p>
+
+<CodeSnippet @name="dark-mode.css" />
+
+<p>
+  Alternatively, you can inline a Tailwind CSS plugin to add the variables to CSS as part of the
+  <a
+    class="mt-2 inline-block underline"
+    href="https://tailwindcss.com/docs/adding-base-styles/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >Base styles</a>.
+</p>
+<CodeSnippet @name="config-dark-mode-vars.js" />
 
 <footer class="pt-12 flex items-center justify-center">
   Made with

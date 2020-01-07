@@ -28,7 +28,8 @@ function registerComponents(
         },
         ({ icon = options.icon, iconColor = options.iconColor }) => {
           return {
-            backgroundImage: `url("${svgToDataUri(
+            backgroundColor: iconColor,
+            mask: `url("${svgToDataUri(
               typeof icon === 'function' ? icon(iconColor) : icon
             )}")`
           };

@@ -1,8 +1,9 @@
 const defaultConfig = {
-  textColor: 'inherit',
-  disabledTextColor: defaultTheme.borderColor.gray[500],
-  placeholderTextColor: defaultTheme.borderColor.gray[500],
+  textColor: defaultTheme.colors.gray[900],
+  disabledTextColor: defaultTheme.colors.gray[500],
+  placeholderTextColor: defaultTheme.colors.gray[500],
   backgroundColor: defaultTheme.colors.white,
+  dropdownBackgroundColor: defaultTheme.colors.white,
   dropdownMargin: defaultTheme.spacing[1],
 
   // Selected option
