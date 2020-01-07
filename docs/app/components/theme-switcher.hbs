@@ -1,0 +1,11 @@
+<button
+  type="button"
+  {{on "click" this.toggleMode}}
+  class="ml-4 outline-none"
+>
+  {{#if this.isDarkModeEnabled}}
+    Switch to Light Mode
+  {{else}}
+    Switch to Dark Mode
+  {{/if}}
+</button>
