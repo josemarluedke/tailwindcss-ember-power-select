@@ -25,7 +25,7 @@ const defaultConfig = {
 
   // Border color
   borderColor: defaultTheme.colors.gray[500],
-  focusBorderColor: defaultTheme.colors.gray[800],
+  focusBorderColor: defaultTheme.colors.blue[400],
   disabledBorderColor: defaultTheme.borderColor.gray[300],
   invalidBorderColor: defaultTheme.borderColor.red[600],
 
