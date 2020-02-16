@@ -20,6 +20,7 @@
   "devDependencies": {
     "@ember/optional-features": "^1.1.0",
     "@ember/render-modifiers": "^1.0.2",
+    "@fullhuman/postcss-purgecss": "^2.0.6",
     "@glimmer/component": "^1.0.0",
     "autoprefixer": "^9.7.4",
     "babel-eslint": "^10.0.3",
