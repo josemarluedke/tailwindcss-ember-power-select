@@ -20,6 +20,7 @@ const defaultConfig = {
 
   // Box Shadow
   triggerFocusBoxShadow: defaultTheme.boxShadow.outline,
+  triggerFocusBoxShadowInvalid: '0 0 0 3px rgba(229,62,62, 0.3)',
   searchInputFocusBoxShadow: defaultTheme.boxShadow.outline,
   dropdownBoxShadow: defaultTheme.boxShadow.md,
 

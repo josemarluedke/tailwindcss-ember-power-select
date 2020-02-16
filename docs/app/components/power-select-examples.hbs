@@ -1,4 +1,4 @@
-<label class="pb-1 inline-block font-semibold">Regular</label>
+<label class="inline-block pb-1 font-semibold">Regular</label>
 <PowerSelect
   @selected={{this.destination}}
   @options={{this.cities}}
@@ -8,7 +8,7 @@
   {{name}}
 </PowerSelect>
 
-<label class="pb-1 mt-4 inline-block font-semibold">Small</label>
+<label class="inline-block pb-1 mt-4 font-semibold">Small</label>
 <PowerSelect
   @triggerClass="ember-power-select-trigger-sm"
   @selected={{this.selectedName}}
@@ -20,7 +20,7 @@
   {{name}}
 </PowerSelect>
 
-<label class="pb-1 mt-4 inline-block font-semibold">Large</label>
+<label class="inline-block pb-1 mt-4 font-semibold">Large</label>
 <PowerSelect
   @triggerClass="ember-power-select-trigger-lg"
   @selected={{this.selectedName}}
@@ -32,7 +32,7 @@
   {{name}}
 </PowerSelect>
 
-<label class="pb-1 mt-4 inline-block font-semibold">With @allowClear</label>
+<label class="inline-block pb-1 mt-4 font-semibold">With @allowClear</label>
 <PowerSelect
   @selected={{this.selectedName}}
   @options={{this.names}}
@@ -43,7 +43,7 @@
   {{name}}
 </PowerSelect>
 
-<label class="pb-1 mt-4 inline-block font-semibold">With @placeholder</label>
+<label class="inline-block pb-1 mt-4 font-semibold">With @placeholder</label>
 <PowerSelect
   @selected={{this.selectedName}}
   @placeholder="Select one item"
@@ -54,7 +54,7 @@
   {{name}}
 </PowerSelect>
 
-<label class="pb-1 mt-4 inline-block font-semibold">Disabled</label>
+<label class="inline-block pb-1 mt-4 font-semibold">Disabled</label>
 <PowerSelect
   @selected={{this.selectedName}}
   @disabled={{true}}
@@ -65,7 +65,7 @@
   {{name}}
 </PowerSelect>
 
-<label class="pb-1 mt-4 inline-block font-semibold">With Search</label>
+<label class="inline-block pb-1 mt-4 font-semibold">With Search</label>
 <PowerSelect
   @searchEnabled={{true}}
   @options={{this.countries}}
@@ -77,7 +77,7 @@
   {{country.name}}
 </PowerSelect>
 
-<label class="pb-1 mt-4 inline-block font-semibold">With Groups</label>
+<label class="inline-block pb-1 mt-4 font-semibold">With Groups</label>
 <PowerSelect
   @options={{this.groupedNumbers}}
   @selected={{this.number}}
@@ -87,7 +87,7 @@
   {{num}}
 </PowerSelect>
 
-<label class="pb-1 mt-4 inline-block font-semibold">Multiple Select</label>
+<label class="inline-block pb-1 mt-4 font-semibold">Multiple Select</label>
 <PowerSelectMultiple
   @searchEnabled={{true}}
   @options={{this.names}}
@@ -98,3 +98,14 @@
 >
   {{name}}
 </PowerSelectMultiple>
+
+<label class="inline-block pb-1 mt-4 font-semibold">With Error</label>
+<PowerSelect
+  @ariaInvalid="true"
+  @selected={{this.selectedName}}
+  @options={{this.names}}
+  @onChange={{fn this.setField "selectedName"}}
+  as |name|
+>
+  {{name}}
+</PowerSelect>
