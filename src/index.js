@@ -1,3 +1,4 @@
+const plugin = require('tailwindcss/plugin');
 const map = require('lodash/map');
 const fromPairs = require('lodash/fromPairs');
 const isEmpty = require('lodash/isEmpty');
@@ -69,7 +70,7 @@ function registerComponents(
 module.exports = {
   registerComponents,
 
-  plugin: function(customConfig) {
+  plugin: plugin.withOptions(function(customConfig) {
     return function({ addComponents, theme }) {
       registerComponents(
         { addComponents, theme },
@@ -77,5 +78,5 @@ module.exports = {
         customConfig
       );
     };
-  }
+  })
 };
