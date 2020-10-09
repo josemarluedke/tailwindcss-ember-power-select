@@ -9,6 +9,10 @@ delete require.cache[
 ];
 
 module.exports = {
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true
+  },
   theme: {},
   variants: {
     backgroundColor: ['dark', 'responsive', 'hover', 'focus'],
