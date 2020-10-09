@@ -57,6 +57,12 @@ module.exports = function(defaults) {
 };
 ```
 
+4. Add autoprefixer to your PostCSS setup.
+
+Some styles require [autoprefixer](https://github.com/postcss/autoprefixer) to be included in your application. You can
+follow [this example](https://github.com/jeffjewiss/ember-cli-postcss#example) to setup
+in an Ember app using `ember-cli-postcss`.
+
 ## Development
 
 * `git clone https://github.com/josemarluedke/tailwindcss-ember-power-select.git` this repository
