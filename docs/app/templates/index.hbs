@@ -1,7 +1,7 @@
 <p class="mt-8">
   <a
-    class="mt-2 inline-block underline"
     href="https://github.com/cibernox/ember-power-select"
+    class="inline-block mt-2 underline"
     target="_blank"
     rel="noopener noreferrer"
   >
@@ -17,7 +17,7 @@
 
 <hr class="my-8">
 
-<h2 class="text-3xl mb-4 font-bold">Installation</h2>
+<h2 class="mb-4 text-3xl font-bold">Installation</h2>
 
 <h3 class="pb-6 text-xl font-semibold">
   1. Install the plugin:
@@ -43,15 +43,38 @@
 
 <CodeSnippet @name="basic-ember-cli-build.js" />
 
+<h3 class="pb-6 text-xl font-semibold">
+  4. Add autoprefixer to your PostCSS setup.
+</h3>
+
+Some styles require
+<a
+  href="https://github.com/postcss/autoprefixer"
+  class="inline-block mt-2 underline"
+  target="_blank"
+  rel="noopener noreferrer"
+>autoprefixer</a>
+to be included in your application. You can follow
+<a
+  href="https://github.com/jeffjewiss/ember-cli-postcss#example"
+  class="inline-block mt-2 underline"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  this example
+</a>
+to setup
+in an Ember app using `ember-cli-postcss`.
+
 <hr class="my-8">
 
-<h2 id="demo" class="text-3xl mb-4 font-bold">Demo</h2>
+<h2 id="demo" class="mb-4 text-3xl font-bold">Demo</h2>
 
 <PowerSelectExamples />
 
 <hr class="my-8">
 
-<h2 class="text-3xl mb-4 font-bold">Configuration</h2>
+<h2 class="mb-4 text-3xl font-bold">Configuration</h2>
 
 <p>
   Some options are a little more complicated to customize using default Tailwind theme options.
@@ -78,7 +101,7 @@
 
 <hr class="my-8">
 
-<h2 class="text-3xl mb-4 font-bold">Customizing the default styles</h2>
+<h2 class="mb-4 text-3xl font-bold">Customizing the default styles</h2>
 <p>
   You can customize the default styles applied by this plugin in the
   <code>theme.emberPowerSelect.default</code>
@@ -129,7 +152,7 @@
   used by the plugin for a complete reference of styles that are applied out of the box.
 </p>
 
-<h3 class="text-xl my-4 font-bold">Customizing the icons</h3>
+<h3 class="my-4 text-xl font-bold">Customizing the icons</h3>
 
 <p>
   Providing a encoded SVG data URL as backgroundImage can be a bit cumbersome, so to make icon customization easier this plugin allows you to provide a normal unencoded SVG using a special icon property instead.
@@ -144,7 +167,7 @@
 
 <CodeSnippet @name="custom-icon.js" />
 
-<h3 class="text-xl my-4 font-bold">Customizing the sizes</h3>
+<h3 class="my-4 text-xl font-bold">Customizing the sizes</h3>
 
 <p>
   We have provided 2 additional sizes for the trigger,
@@ -170,7 +193,7 @@
 
 <hr class="my-8">
 
-<h2 class="text-3xl my-4 font-bold">Dark Mode</h2>
+<h2 class="my-4 text-3xl font-bold">Dark Mode</h2>
 
 <p>
   There are many ways that one can implement Dark Mode in an app.
@@ -192,7 +215,7 @@
 <p>
   Alternatively, you can inline a Tailwind CSS plugin to add the variables to CSS as part of the
   <a
-    class="mt-2 inline-block underline"
+    class="inline-block mt-2 underline"
     href="https://tailwindcss.com/docs/adding-base-styles/"
     target="_blank"
     rel="noopener noreferrer"
