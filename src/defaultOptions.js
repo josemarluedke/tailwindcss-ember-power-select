@@ -5,8 +5,8 @@ const { merge } = require('./helpers');
 
 const defaultConfig = {
   textColor: defaultTheme.colors.gray[900],
-  disabledTextColor: defaultTheme.colors.gray[500],
-  placeholderTextColor: defaultTheme.colors.gray[500],
+  disabledTextColor: defaultTheme.colors.gray[300],
+  placeholderTextColor: defaultTheme.colors.gray[300],
   backgroundColor: defaultTheme.colors.white,
   dropdownBackgroundColor: defaultTheme.colors.white,
   dropdownMargin: defaultTheme.spacing[1],
@@ -24,23 +24,23 @@ const defaultConfig = {
   multipleOptionTextColor: defaultTheme.colors.white,
 
   // Box Shadow
-  triggerFocusBoxShadow: defaultTheme.boxShadow.outline,
+  triggerFocusBoxShadow: '0 0 0 3px rgba(59, 130, 246, 0.45)',
   triggerFocusBoxShadowInvalid: '0 0 0 3px rgba(229,62,62, 0.3)',
-  searchInputFocusBoxShadow: defaultTheme.boxShadow.outline,
+  searchInputFocusBoxShadow: '0 0 0 3px rgba(59, 130, 246, 0.45)',
   dropdownBoxShadow: defaultTheme.boxShadow.md,
 
   // Border color
-  borderColor: defaultTheme.colors.gray[500],
+  borderColor: defaultTheme.colors.gray[400],
   focusBorderColor: defaultTheme.colors.blue[400],
   disabledBorderColor: defaultTheme.borderColor.gray[300],
   invalidBorderColor: defaultTheme.borderColor.red[600],
 
   // Border Radius
-  triggerBorderRadius: defaultTheme.borderRadius.default,
-  dropdownBorderRadius: defaultTheme.borderRadius.default,
-  searchInputBorderRadius: defaultTheme.borderRadius.default,
-  multipleOptionBorderRadius: defaultTheme.borderRadius.default,
-  openedBorderRadius: defaultTheme.borderRadius.default
+  triggerBorderRadius: defaultTheme.borderRadius.DEFAULT,
+  dropdownBorderRadius: defaultTheme.borderRadius.DEFAULT,
+  searchInputBorderRadius: defaultTheme.borderRadius.DEFAULT,
+  multipleOptionBorderRadius: defaultTheme.borderRadius.DEFAULT,
+  openedBorderRadius: defaultTheme.borderRadius.DEFAULT
 };
 
 module.exports = function({ theme }, customConfig) {
@@ -55,17 +55,17 @@ module.exports = function({ theme }, customConfig) {
       trigger: {
         position: 'relative',
         borderColor: config.borderColor,
-        borderWidth: defaultTheme.borderWidth.default,
+        borderWidth: defaultTheme.borderWidth.DEFAULT,
         borderRadius: config.triggerBorderRadius,
         width: defaultTheme.width.full,
         backgroundColor: config.backgroundColor,
-        fontSize: defaultTheme.fontSize.base,
+        fontSize: defaultTheme.fontSize.base[0],
         color: config.textColor,
         lineHeight: defaultTheme.lineHeight.tight,
         padding: defaultTheme.spacing[3],
         overflowX: 'hidden',
         textOverflow: 'ellipsis',
-        minHeight: `calc((${defaultTheme.fontSize.base} * ${defaultTheme.lineHeight.snug}) + ${defaultTheme.spacing[6]})`,
+        minHeight: `calc((${defaultTheme.fontSize.base[0]} * ${defaultTheme.lineHeight.snug}) + ${defaultTheme.spacing[6]})`,
         userSelect: 'none',
         '&:focus': {
           outline: 'none',
@@ -112,7 +112,7 @@ module.exports = function({ theme }, customConfig) {
         top: '0',
         bottom: '0',
         margin: 'auto',
-        minHeight: defaultTheme.fontSize.base,
+        minHeight: defaultTheme.fontSize.base[0],
         transition:
           'background-image .25s ease-in-out,transform .25s ease-in-out',
         iconColor: 'currentColor',
@@ -143,11 +143,11 @@ module.exports = function({ theme }, customConfig) {
       },
       searchInput: {
         borderColor: config.borderColor,
-        borderWidth: defaultTheme.borderWidth.default,
+        borderWidth: defaultTheme.borderWidth.DEFAULT,
         borderRadius: config.searchInputBorderRadius,
         width: defaultTheme.width.full,
         backgroundColor: config.backgroundColor,
-        fontSize: defaultTheme.fontSize.base,
+        fontSize: defaultTheme.fontSize.base[0],
         lineHeight: defaultTheme.lineHeight.tight,
         padding: defaultTheme.spacing[3],
         '&:focus': {
@@ -162,7 +162,7 @@ module.exports = function({ theme }, customConfig) {
         color: config.textColor,
         backgroundColor: config.dropdownBackgroundColor,
         borderColor: config.borderColor,
-        borderWidth: defaultTheme.borderWidth.default,
+        borderWidth: defaultTheme.borderWidth.DEFAULT,
         borderRadius: config.dropdownBorderRadius,
         boxShadow: config.dropdownBoxShadow,
         '&.ember-basic-dropdown-content--in-place': {
@@ -271,7 +271,7 @@ module.exports = function({ theme }, customConfig) {
         backgroundColor: config.multipleOptionBackgroundColor,
         color: config.multipleOptionTextColor,
         borderRadius: config.multipleOptionBorderRadius,
-        fontSize: defaultTheme.fontSize.sm,
+        fontSize: defaultTheme.fontSize.sm[0],
         lineHeight: defaultTheme.lineHeight.tight,
         paddingTop: defaultTheme.spacing[1],
         paddingRight: defaultTheme.spacing[2],
@@ -305,14 +305,14 @@ module.exports = function({ theme }, customConfig) {
     },
     sm: {
       trigger: {
-        fontSize: defaultTheme.fontSize.sm,
+        fontSize: defaultTheme.fontSize.sm[0],
         padding: defaultTheme.spacing[2],
-        minHeight: `calc((${defaultTheme.fontSize.sm} * ${defaultTheme.lineHeight.snug}) + ${defaultTheme.spacing[4]})`,
+        minHeight: `calc((${defaultTheme.fontSize.sm[0]} * ${defaultTheme.lineHeight.snug}) + ${defaultTheme.spacing[4]})`,
         '.ember-power-select-multiple-options': {
           marginTop: '-0.05rem'
         },
         '.ember-power-select-multiple-option': {
-          fontSize: defaultTheme.fontSize.xs,
+          fontSize: defaultTheme.fontSize.xs[0],
           paddingTop: '0.15rem',
           paddingRight: defaultTheme.spacing[1],
           paddingBottom: '0.15rem',
@@ -323,7 +323,7 @@ module.exports = function({ theme }, customConfig) {
     lg: {
       trigger: {
         padding: defaultTheme.spacing[4],
-        minHeight: `calc((${defaultTheme.fontSize.base} * ${defaultTheme.lineHeight.snug}) + ${defaultTheme.spacing[8]})`
+        minHeight: `calc((${defaultTheme.fontSize.base[0]} * ${defaultTheme.lineHeight.snug}) + ${defaultTheme.spacing[8]})`
       }
     }
   };

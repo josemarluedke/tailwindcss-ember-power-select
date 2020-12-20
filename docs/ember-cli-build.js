@@ -8,7 +8,7 @@ const purgecssOptions = {
   defaultExtractor: content => {
     return content.match(/[A-Za-z0-9-_:/]+/g) || [];
   },
-  whitelistPatterns: [/mode-dark/, /hljs/]
+  safelist: ['dark', /hljs/]
 };
 
 module.exports = function(defaults) {
@@ -26,8 +26,8 @@ module.exports = function(defaults) {
           require('tailwindcss')(
             path.join('app', 'styles', 'tailwind.config.js')
           ),
-          require('autoprefixer'),
-          require('@fullhuman/postcss-purgecss')(purgecssOptions)
+          require('autoprefixer')
+          // require('@fullhuman/postcss-purgecss')(purgecssOptions)
         ]
       }
     }

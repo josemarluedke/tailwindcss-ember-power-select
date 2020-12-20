@@ -16,7 +16,7 @@
   --power-select-multiple-option-background-color: #718096;
 }
 
-.mode-dark {
+.dark {
   --power-select-text-color: #e2e8f0;
   --power-select-disabled-text-color: #4a5568;
   --power-select-disabled-border-color: #2d3748;
