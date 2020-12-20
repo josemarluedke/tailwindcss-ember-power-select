@@ -11,8 +11,8 @@ jobs:
       CI: 'true'
 
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
         with:
           node-version: 12.x
       - name: Install yarn
@@ -41,7 +41,7 @@ jobs:
           git config --global user.name "Tomster"
           git config --global user.email "tomster@emberjs.com"
       - name: Set up SSH
-        uses: webfactory/ssh-agent@v0.1.1
+        uses: webfactory/ssh-agent@v0.4.1
         with:
           ssh-private-key: ${{ secrets.DEPLOY_KEY }}
       - uses: actions/checkout@v1
@@ -50,7 +50,7 @@ jobs:
           git checkout "$(echo ${{ github.ref }} | sed -E 's|refs/[a-zA-Z]+/||')"
       - name: Fetch Git Tags
         run: git fetch --tags
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         with:
           node-version: 12.x
       - name: Install yarn
