@@ -26,8 +26,8 @@ module.exports = function(defaults) {
           require('tailwindcss')(
             path.join('app', 'styles', 'tailwind.config.js')
           ),
-          require('autoprefixer')
-          // require('@fullhuman/postcss-purgecss')(purgecssOptions)
+          require('autoprefixer'),
+          require('@fullhuman/postcss-purgecss')(purgecssOptions)
         ]
       }
     }
