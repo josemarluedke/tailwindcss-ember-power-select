@@ -17,7 +17,7 @@ code {
   @apply tracking-tight;
 }
 
-.mode-dark code {
+.dark code {
   @apply bg-gray-700;
 }
 

@@ -9,14 +9,15 @@ delete require.cache[
 ];
 
 module.exports = {
+  darkMode: 'class',
   theme: {},
   variants: {
-    backgroundColor: ['dark', 'responsive', 'hover', 'focus'],
-    textColor: ['dark', 'responsive', 'hover', 'focus']
+    extend: {
+      backgroundColor: ['dark'],
+      textColor: ['dark']
+    }
   },
   plugins: [
-    require('tailwindcss-dark-mode')(),
-
     function({ addBase, theme }) {
       addBase({
         [':root']: {
@@ -26,23 +27,23 @@ module.exports = {
           '--power-select-placeholder-text-color': theme('colors.gray.500'),
           '--power-select-background-color': theme('colors.white'),
           '--power-select-dropdown-background-color': theme('colors.white'),
-          '--power-select-border-color': theme('colors.gray.500'),
+          '--power-select-border-color': theme('colors.gray.400'),
           '--power-select-selected-background-color': theme('colors.gray.200'),
           '--power-select-multiple-option-background-color': theme(
             'colors.gray.600'
           )
         },
-        ['.mode-dark']: {
+        ['.dark']: {
           '--power-select-text-color': theme('colors.gray.300'),
-          '--power-select-disabled-text-color': theme('colors.gray.700'),
-          '--power-select-disabled-border-color': theme('colors.gray.800'),
-          '--power-select-placeholder-text-color': theme('colors.gray.700'),
+          '--power-select-disabled-text-color': theme('colors.gray.600'),
+          '--power-select-disabled-border-color': theme('colors.gray.700'),
+          '--power-select-placeholder-text-color': theme('colors.gray.600'),
           '--power-select-background-color': theme('colors.gray.900'),
           '--power-select-dropdown-background-color': theme('colors.gray.900'),
-          '--power-select-border-color': theme('colors.gray.600'),
-          '--power-select-selected-background-color': theme('colors.gray.700'),
+          '--power-select-border-color': theme('colors.gray.500'),
+          '--power-select-selected-background-color': theme('colors.gray.600'),
           '--power-select-multiple-option-background-color': theme(
-            'colors.gray.700'
+            'colors.gray.600'
           )
         }
       });

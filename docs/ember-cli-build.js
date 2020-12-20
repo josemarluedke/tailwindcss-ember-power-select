@@ -8,7 +8,7 @@ const purgecssOptions = {
   defaultExtractor: content => {
     return content.match(/[A-Za-z0-9-_:/]+/g) || [];
   },
-  whitelistPatterns: [/mode-dark/, /hljs/]
+  safelist: ['dark', /hljs/]
 };
 
 module.exports = function(defaults) {

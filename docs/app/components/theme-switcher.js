@@ -34,9 +34,9 @@ export default class ThemeSwitcherComponent extends Component {
 
   applyClasses() {
     if (this.isDarkModeEnabled) {
-      document.documentElement.classList.add('mode-dark');
+      document.documentElement.classList.add('dark');
     } else {
-      document.documentElement.classList.remove('mode-dark');
+      document.documentElement.classList.remove('dark');
     }
   }
 

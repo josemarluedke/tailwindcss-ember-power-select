@@ -17,7 +17,7 @@ module.exports = {
             'colors.gray.600'
           )
         },
-        ['.mode-dark']: {
+        ['.dark']: {
           '--power-select-text-color': theme('colors.gray.300'),
           '--power-select-disabled-text-color': theme('colors.gray.700'),
           '--power-select-disabled-border-color': theme('colors.gray.800'),
