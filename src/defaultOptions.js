@@ -1,6 +1,66 @@
-const defaultTheme = require('tailwindcss/resolveConfig')(
-  require('tailwindcss/defaultConfig')
-).theme;
+// TailwindCSS v4 compatible theme values using CSS variables
+const defaultTheme = {
+  colors: {
+    gray: {
+      900: 'rgb(17 24 39)', // gray-900
+      600: 'rgb(75 85 99)', // gray-600
+      400: 'rgb(156 163 175)', // gray-400
+      300: 'rgb(209 213 219)', // gray-300
+      200: 'rgb(229 231 235)' // gray-200
+    },
+    blue: {
+      500: 'rgb(59 130 246)', // blue-500
+      400: 'rgb(96 165 250)' // blue-400
+    },
+    red: {
+      600: 'rgb(220 38 38)' // red-600
+    },
+    white: 'rgb(255 255 255)'
+  },
+  spacing: {
+    1: '0.25rem',
+    2: '0.5rem',
+    3: '0.75rem',
+    4: '1rem',
+    6: '1.5rem',
+    8: '2rem',
+    12: '3rem',
+    48: '12rem'
+  },
+  borderWidth: {
+    DEFAULT: '1px'
+  },
+  borderRadius: {
+    DEFAULT: '0.25rem'
+  },
+  boxShadow: {
+    md: '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)'
+  },
+  borderColor: {
+    gray: {
+      300: 'rgb(209 213 219)',
+      400: 'rgb(156 163 175)'
+    },
+    red: {
+      600: 'rgb(220 38 38)'
+    }
+  },
+  fontSize: {
+    xs: ['0.75rem', { lineHeight: '1rem' }],
+    sm: ['0.875rem', { lineHeight: '1.25rem' }],
+    base: ['1rem', { lineHeight: '1.5rem' }]
+  },
+  fontWeight: {
+    bold: '700'
+  },
+  lineHeight: {
+    tight: '1.25',
+    snug: '1.375'
+  },
+  width: {
+    full: '100%'
+  }
+};
 const { merge } = require('./helpers');
 
 const defaultConfig = {
